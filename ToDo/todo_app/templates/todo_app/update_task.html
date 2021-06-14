@@ -1,0 +1,21 @@
+{% extends 'todo_app/base.html' %}
+{% load static %}
+
+{% block title %} To Do | Update Task {% endblock %}
+
+
+{% block content %}
+	
+	<div class="update-task-header">
+		<h3>Update Task</h3>
+	</div>
+
+	<div class="update-task">
+		<form method="POST" action="">
+			{% csrf_token %}
+			{{form | linebreaks}} 
+			<input type="submit" name="update_task" value="Update">
+		</form>
+	</div>
+
+{% endblock %}
